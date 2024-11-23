@@ -58,4 +58,9 @@ public class Utilidades {
         // 2 + 11 - 2  ---------- 2 + (9)
         return minimo + random.nextInt((maximo + 1) - minimo);
     }
+
+    public static float generarNumeroRangoFloat(float minimo, float maximo) {
+        Random random = new Random();
+        return minimo + random.nextFloat() * (maximo - minimo);
+    }
 }
