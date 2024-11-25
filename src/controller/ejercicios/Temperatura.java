@@ -6,7 +6,7 @@ import controller.util.Utilidades;
 
 public class Temperatura {
     public float GenerarTemperatura(float min, float max) {
-        return Utilidades.generarNumeroRangoFloat(min, max);
+        temp = Utilidades.generarNumeroRangoFloat(min, max);
     }
 
     public void ejecutar() {
@@ -19,9 +19,15 @@ public class Temperatura {
         String maximo = scanner.nextLine();
         float max = Utilidades.transformStringToFloat(maximo);
         String respuesta = "s";
+        int cont = 1;
+        float promedio = 0.0f;
         do {
-            System.out.println("La temperatura generada es: " + GenerarTemperatura(min, max));
+            float temp = GenerarTemperatura(min, max);
+            cont++;
+            System.out.println("La temperatura generada es: " + temp);
             System.out.println("Si desea generar otra temperatura presione s");
-        } while (respuesta.equalsIgnoreCase("s"));
+        } while (respuesta.equalsIgnoreCase("s")
+        System.out.println("Fueron generados " + cont + " temperaturas y el primedio es: " + Utilidades.redondear(promedio/cont));
+        );
     }
 }

@@ -63,4 +63,12 @@ public class Utilidades {
         Random random = new Random();
         return minimo + random.nextFloat() * (maximo - minimo);
     }
+
+    public static float redondear(float num) {
+        // return (float) (Math.round(num*100.00)/100.00);
+        
+        float aux = num*100.0f;
+        float aux1 = (float) ((int) aux);
+        return aux1/100f;
+    }
 }
